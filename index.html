@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script src="jquery.js"></script>
+	<script src="jquery.database.js"></script>
+	<script>
+	$(function() {
+		// var _db = $(window).database();
+		var db = $.database;
+		var conn = db.connect('dummy');
+
+		// conn.select('')
+
+		// var data = database.select('username, age').from('users').where('username', 'waghcwb').where('level', 'admin');
+		// database.settings.scope = 'session';
+		// database.use_table('users');
+		// database.connect('hering', function(db) {
+		// 	console.info(db);
+		// });			
+		// console.info(data.results);
+	
+		// conn.config();
+		
+		// conn.dbprefix()
+		// conn.config({
+		// 	prefix: '_database'
+		// });
+
+
+		conn.insert('users', [{
+				id: 0,
+				username: 'Wagner',
+				age: 20
+			}, {
+				id: 1,
+				username: 'Érica',
+				age: 17
+		}]);
+	});
+	</script>
+</body>
+</html>
